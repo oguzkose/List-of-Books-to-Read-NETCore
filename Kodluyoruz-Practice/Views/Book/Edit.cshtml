@@ -1,0 +1,35 @@
+﻿@model BookViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+@using (Html.BeginForm(FormMethod.Post))
+{<div class="container">
+        <div class="form-group row">
+            @Html.LabelFor(x => x.Id, "Sıra No", new { @class = "col-md-2 col-form-label" })
+            @Html.Label(Model.Id.ToString())
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(x => x.Name, "Kitap Adı", new { @class = "col-md-2 col-form-label" })
+            @Html.TextBoxFor(x => x.Name)
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(x => x.Author, "Yazar Adı", new { @class = "col-md-2 col-form-label" })
+            @Html.TextBoxFor(x => x.Author)
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(x => x.Publisher, "Yayınevi", new { @class = "col-md-2 col-form-label" })
+            @Html.TextBoxFor(x => x.Publisher)
+        </div>
+        <div class="form-group row">
+            <button class="btn btn-primary" type="submit">Değişiklikleri Kaydet</button>
+        </div>
+
+    </div>
+}
+
+
+
+

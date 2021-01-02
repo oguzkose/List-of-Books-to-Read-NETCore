@@ -1,0 +1,27 @@
+﻿@model List<BookViewModel>
+
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"><h3>Id</h3></div>
+            <div class="col-md-3"><h3>Kitap Adı</h3></div>
+            <div class="col-md-3"><h3>Yazar</h3></div>
+            <div class="col-md-3"><h3>Yayınevi</h3></div>
+            <div class="col-md-2"><a class="btn btn-success" href="/Book/Add" role="button">New Book Add</a></div>
+        </div>
+        <hr />
+        @foreach (var book in Model)
+        {
+            <div class="row">
+                <div class="col-md-1"><p>@book.Id</p> </div>
+                <div class="col-md-3"><p>@book.Name</p></div>
+                <div class="col-md-3"><p>@book.Author</p></div>
+                <div class="col-md-3"><p>@book.Publisher</p></div>
+                <div class="col-md-1"><a class="btn btn-primary" href="Book/edit?id=@book.Id">Düzenle</a></div>
+                <div class="col-md-1"><a class="btn btn-danger" type="submit" href="Book/delete?id=@book.Id">Sil</a></div>
+                <br />
+            </div>
+            <br />
+        }
+    </div>
