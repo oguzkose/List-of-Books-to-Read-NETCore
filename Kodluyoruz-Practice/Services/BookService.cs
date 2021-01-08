@@ -48,9 +48,12 @@ namespace Kodluyoruz_Practice.Services
             _bookContext.Books.Remove(entity);
         }
         #endregion
+
+        #region Kitap Ekleme
         public void Add(BookEntity entity)
         {
             _bookContext.Books.Add(entity);
-        }
+        } 
+        #endregion
     }
 }
